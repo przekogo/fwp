@@ -1,11 +1,14 @@
 .gallery {
   width: 100%;
   margin: 0 0 15px 0;
+  text-align: center;
 }
 .gallery .gallery-wrapper {
-  display: block;
+  display: inline-block;
   position: relative;
-  width: 100%;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
   height: 200px;
 }
 .gallery .polaroid {
