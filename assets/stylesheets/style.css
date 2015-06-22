@@ -1,4 +1,6 @@
 ﻿@import url('../fonts/fonts.css');
+@import url('hotels.css');
+@import url('gallery.css');
 
 #body {
   font-family: 'open_sanslight', sans-serif;
@@ -79,7 +81,7 @@ p {
 
     }
 
-#overlay, #background {
+#overlay, .background {
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -120,6 +122,19 @@ p {
   width: 300px;
   height: 100%;
   transition: all 1s ease-in-out;
+}
+
+#content {
+  min-height: 100%;
+  color: #fff;
+  font-family: 'Anton';
+  padding: 15px 5% 0 15px;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;  
+}
+
+#polaroid_container {
+  min-height: 100%;
+  overflow: visible;
 }
 
 #retro-filter img, .retro-filter img {
@@ -180,11 +195,15 @@ p {
   font: normal 82px/normal "Anton", Helvetica, sans-serif;
   position: absolute;
   opacity: 0.85;
+  color: #000;
 }
 .content-header {
   min-height: 60px;
   font: normal 40px/normal "Anton", Helvetica, sans-serif;
   color: #fff;
+}
+.content-header p {
+  margin-top: 10px;
 }
 
 /* --------------------------- polaroids --------------------------- */
@@ -238,12 +257,13 @@ p {
     }
   }
 /* --------------------------- ---------------------------*/
-#background {
+.background {
   background: url(../images/DSC04120.JPG) no-repeat center top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  transition: opacity 1s linear;
 }
 
 /* -------------- Bootstrap Navs ----------------- */
@@ -402,11 +422,11 @@ p {
 }
 
 #left-sidebar #main-menu > li.menu-item > a:hover {
-  color: rgba(190,38,35,0.7);
+  color: rgba(230,38,35,0.7);
 }
 
 #left-sidebar #main-menu > li.menu-item.active > * {
-  color: rgba(190,38,35,0.7);
+  color: rgba(230,38,35,0.7);
 }
 
   @media (min-width: 768px) {
