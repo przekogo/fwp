@@ -107,7 +107,7 @@ p {
 }
 
 #overlay {
-  opacity: 0.35;
+  opacity: 0.45;
   background-image: url(../images/overlay.png);
 }
 
@@ -258,7 +258,7 @@ p {
   }
 /* --------------------------- ---------------------------*/
 .background {
-  background: url(../images/DSC04120.JPG) no-repeat center top fixed;
+  background: url(../images/backgrounds/ztlo.jpg) no-repeat center top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

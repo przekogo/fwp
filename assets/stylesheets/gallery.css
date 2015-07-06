@@ -55,3 +55,7 @@
 .gallery .fa-border:hover {
   border-color: rgba(230,38,35,1);
 }
+.tab-pane.fade.active.in {
+  height: auto !important;
+  min-height: 0px !important;
+}

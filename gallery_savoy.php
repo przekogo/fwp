@@ -26,11 +26,11 @@
   <script src='assets/javascripts/savoy.js'></script>
 </head>
 <body>
-<!--   <div id='background-swapper'>
+  <div id='background-swapper'>
     <div class='background old'></div>
   </div>
   <div id='retro-filter'><img src="assets/images/grunge.jpg"></div>
-  <div id='overlay'></div> -->
+  <div id='overlay'></div>
   <div class='container-fluid'>
     <div class='row'>
       <div class='col-sm-3 col-xs-12'>
@@ -69,13 +69,37 @@
 
                   <!-- Tab panes -->
                   <div class="tab-content">
-
+                     
                     <div role="tabpanel" class="tab-pane fade active in" id="tabs-tab1" style="min-height: 556px;">
                       <h4>Donec nec magna condimentum</h4>
                       <p>Uspendisse molestie lorem odio, sit amet. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio. Etiam scelerisque lacus tempor, rhoncus diam vel, gravida felis. Fusce tristique sem et leo. Pellentesque sed malesuada turpis. Quisque eget lacus sit amet dui.</p>
                       <div class='row gallery'>
                         <div class='gallery-wrapper'>
                           
+<?php
+
+$directory="./assets/images/gallery/savoy";
+$dir=opendir($directory);
+ 
+while($file_name=readdir($dir))
+    {
+         if(($file_name!=".")&&($file_name!=".."))
+        {
+  $img = "assets/images/gallery/Savoy/".$file_name;
+  echo "  <div class='polaroid'>
+                            <div class='polaroid-image'>
+                           <img src='$img' />
+                            </div>
+                            <div class='retro-filter'><img src='assets/images/grunge.jpg'></div>
+                          </div>
+                          ";
+  echo "\n";
+        }
+    }
+ 
+closedir($dir);
+
+?>
                           <div class='polaroid'>
                             <div class='polaroid-image'>
                               <img src='assets/images/r1.jpg'>
@@ -83,20 +107,6 @@
                             <div class='retro-filter'><img src="assets/images/grunge.jpg"></div>
                           </div>
                           
-                          <div class='polaroid'>
-                            <div class='polaroid-image'>
-                              <img src='assets/images/r2.jpg'>
-                            </div>
-                            <div class='retro-filter'><img src="assets/images/grunge.jpg"></div>
-                          </div>
-
-                          <div class='polaroid'>
-                            <div class='polaroid-image'>
-                              <img src='assets/images/r3.jpg'>
-                            </div>
-                            <div class='retro-filter'><img src="assets/images/grunge.jpg"></div>
-                          </div>
-
                         </div>
                         <div class='col-xs-offset-3 col-xs-3 back-button scroll-button'>
                           <i class="fa fa-long-arrow-left fa-border"></i>
